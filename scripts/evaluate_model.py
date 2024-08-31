@@ -3,7 +3,7 @@ from stable_baselines3 import DQN
 from scripts.environment import PricingEnvironment
 
 def evaluate_rl_agent():
-    env = PricingEnvironment(mode = 'test')
+    env = PricingEnvironment(mode='test')
     env = gym.vector.SyncVectorEnv([lambda: env])
     
     model = DQN.load("models/dqn_pricing_model")
@@ -19,5 +19,6 @@ def evaluate_rl_agent():
             break
 
     print(f'Evaluation complete. Total reward: {total_reward.sum()}')
+
     
 

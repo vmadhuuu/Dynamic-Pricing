@@ -1,5 +1,5 @@
 from scripts.data_preprocessing import preprocess_data
-from scripts.train_model import train_rl_agent_with_mlp
+from scripts.train_model import train_rl_agent
 from scripts.evaluate_model import evaluate_rl_agent
 
 def main():
@@ -9,7 +9,7 @@ def main():
     preprocess_data(input_file = 'dynamic_pricing.csv')
 
     print("Training the model!")
-    train_rl_agent_with_mlp()
+    train_rl_agent()
 
     print("Evaluating the model!")
     evaluate_rl_agent()
